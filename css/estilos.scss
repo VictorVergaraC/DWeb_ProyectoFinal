@@ -1,0 +1,80 @@
+/* Variables */
+$color_tranparente: 'transparent';
+$color_negro: #24252A;
+$color_blanco: #edf0f1;
+
+@import 'header';
+@import 'beadcrumb';
+@import 'cards';
+@import 'navbar';
+@import 'img';
+
+.container-principal {
+    position: relative;
+    display: inline-block;
+    max-width: 100%;
+}
+
+.texto-principal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 80%;
+    max-width: 400px;
+
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 18px;
+    color: $color_negro;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-cuenta {
+    padding: .4rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+}
+
+@media (max-width: 1194px) {
+    .f-title {
+        display: none;
+    }
+}
+
+@media (max-width: 998px) {
+    .d-flex {
+        margin: 0 auto;
+    }
+
+    .p-vendidos {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    .texto-principal {
+        font-size: 14px;
+    }
+
+    .p-vendidos {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .section-marcas {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}

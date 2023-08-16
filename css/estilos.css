@@ -1,3 +1,168 @@
+/* Variables */
+nav {
+  background-color: #24252A;
+  color: #edf0f1;
+}
 
+.contenedor-beadcrumb {
+  background-color: "transparent";
+}
+
+.breadcrumb {
+  background-color: "transparent";
+}
+
+.card {
+  width: 17rem;
+}
+
+.card-info {
+  max-width: 40rem;
+}
+
+.card-marca {
+  width: 14rem;
+  margin: 1rem 0.8rem;
+  overflow: hidden;
+}
+
+.card-footer {
+  background-color: #edf0f1;
+  padding: 10px 20px;
+  border-top: 1px solid #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-card {
+  font-size: 0.9rem;
+  color: #24252A;
+}
+
+@media (max-width: 998px) {
+  .p-vendidos .card {
+    margin: 0.7rem 0;
+  }
+}
+@media (max-width: 767px) {
+  .card-title {
+    font-size: 1rem;
+  }
+  .card-deck {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    margin: 0.5rem;
+  }
+}
+@media (max-width: 408px) {
+  .card-info {
+    width: 16rem;
+  }
+}
+.navbar-toggler {
+  color: #edf0f1;
+}
+
+.bg-nav-footer {
+  background-color: #24252A;
+}
+
+.texto-nav-footer {
+  color: #edf0f1;
+}
+
+.img-principal {
+  height: 30rem;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  opacity: 0.5;
+}
+
+.img {
+  width: 100%;
+  object-fit: cover;
+  height: 222px;
+  margin: auto;
+  transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.img:hover {
+  transform: scale(0.9);
+}
+
+.producto-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.container-principal {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+}
+
+.texto-principal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 80%;
+  max-width: 400px;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 18px;
+  color: #24252A;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-cuenta {
+  padding: 0.4rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+}
+
+@media (max-width: 1194px) {
+  .f-title {
+    display: none;
+  }
+}
+@media (max-width: 998px) {
+  .d-flex {
+    margin: 0 auto;
+  }
+  .p-vendidos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 767px) {
+  .texto-principal {
+    font-size: 14px;
+  }
+  .p-vendidos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .section-marcas {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
 
 /*# sourceMappingURL=estilos.css.map */
