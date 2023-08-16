@@ -5,6 +5,14 @@ nav {
     color: #edf0f1;
 }
 
+.contenedor-beadcrumb {
+    background-color: transparent;
+}
+
+.breadcrumb {
+    background-color: transparent;
+}
+
 .container-principal {
     position: relative;
     display: inline-block;
