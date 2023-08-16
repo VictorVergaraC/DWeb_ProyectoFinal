@@ -5,11 +5,11 @@ nav {
 }
 
 .contenedor-beadcrumb {
-  background-color: "transparent";
+  background-color: transparent;
 }
 
 .breadcrumb {
-  background-color: "transparent";
+  background-color: transparent;
 }
 
 .card {
@@ -75,6 +75,14 @@ nav {
   color: #edf0f1;
 }
 
+.nav-item {
+  transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.nav-item:hover {
+  transform: scale(0.9);
+}
+
 .img-principal {
   height: 30rem;
   width: 100%;
@@ -124,6 +132,14 @@ nav {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn {
+  transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.btn:hover {
+  transform: scale(0.9);
 }
 
 .btn-cuenta {

@@ -9,3 +9,11 @@
 .texto-nav-footer {
     color: $color_blanco;
 }
+
+.nav-item {
+    transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.nav-item:hover {
+    transform: scale(0.9);
+}
