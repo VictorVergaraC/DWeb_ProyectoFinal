@@ -1,7 +1,13 @@
-@mixin boton($bg_color, $color_letra) {
+@mixin boton($bg_color, $color_letra, $font_family) {
 
     background-color: $bg_color;
-    color: $color_letra;    
+    color: $color_letra;
+    border: none;
+    font-family: $font_family, sans-serif;
+    padding: .4rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+
 }
 
 @mixin boton_hover($bg_color, $color_letra) {
@@ -11,8 +17,17 @@
 }
 
 .boton {
-    @include boton_hover(rgba(0,136,169,1),$color_blanco);
+    @include boton(rgba(0,136,169,1),$color_blanco, 'Montserrat');
     transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.boton-comprar {
+    @include boton(rgba(0,136,169,1),$color_blanco, 'Open Sans');
+    transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.boton-comprar:hover {
+    @include boton_hover(rgba(0,136,169,0.6),$color_blanco);
+    transform: scale(0.9);
 }
 
 .boton:hover {
@@ -21,7 +36,7 @@
 }
 
 .btn-cuenta {
-    padding: .4rem 2rem;
-    border-radius: 50px;
-    text-decoration: none;
+    // padding: .4rem 2rem;
+    // border-radius: 50px;
+    // text-decoration: none;
 }
