@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
+
 // Variables
 $color_tranparente: transparent;
 $color_negro: #24252A;
@@ -8,6 +10,7 @@ $color_blanco: #edf0f1;
 @import 'cards';
 @import 'navbar';
 @import 'img';
+@import 'botones';
 
 .container-principal {
     position: relative;
@@ -31,20 +34,6 @@ $color_blanco: #edf0f1;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
-}
-
-.btn {
-    transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
-}
-
-.btn:hover {
-    transform: scale(0.9);
-}
-
-.btn-cuenta {
-    padding: .4rem 2rem;
-    border-radius: 50px;
-    text-decoration: none;
 }
 
 @media (max-width: 1194px) {

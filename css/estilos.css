@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:500");
 nav {
   background-color: #24252A;
   color: #edf0f1;
@@ -67,6 +68,10 @@ nav {
     width: 16rem;
   }
 }
+nav {
+  font-family: "Montserrat", sans-serif;
+}
+
 .navbar-toggler {
   color: #edf0f1;
 }
@@ -114,6 +119,20 @@ nav {
   border-radius: 5px;
 }
 
+.btn {
+  transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.btn:hover {
+  transform: scale(0.9);
+}
+
+.btn-cuenta {
+  padding: 0.4rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+}
+
 .container-principal {
   position: relative;
   display: inline-block;
@@ -135,20 +154,6 @@ nav {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
-}
-
-.btn {
-  transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
-}
-
-.btn:hover {
-  transform: scale(0.9);
-}
-
-.btn-cuenta {
-  padding: 0.4rem 2rem;
-  border-radius: 50px;
-  text-decoration: none;
 }
 
 @media (max-width: 1194px) {

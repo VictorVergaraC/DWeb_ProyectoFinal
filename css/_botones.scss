@@ -1,0 +1,22 @@
+@mixin boton($bg_color, $color_letra, $width, $borde_redondo) {
+
+    background-color: $bg_color;
+    color: $color_letra;
+    width: $width;
+    border-radius: $borde_redondo;
+}
+
+.btn {
+    
+    transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.btn:hover {
+    transform: scale(0.9);
+}
+
+.btn-cuenta {
+    padding: .4rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+}
