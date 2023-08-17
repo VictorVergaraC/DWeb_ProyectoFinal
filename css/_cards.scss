@@ -1,5 +1,11 @@
 .card {
     width: 17rem;
+
+    .cont-img {
+        max-width: 100%;
+        height: auto;
+        padding: .8rem;
+    }
 }
 
 .card-info {
