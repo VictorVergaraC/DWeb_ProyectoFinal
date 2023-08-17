@@ -1,5 +1,12 @@
 nav {
     font-family: "Montserrat", sans-serif;
+
+    ul {
+
+        li {
+            color: rgba(0,136,169,1);
+        }
+    }
 }
 
 .navbar-toggler {
@@ -14,10 +21,13 @@ nav {
     color: $color_blanco;
 }
 
-.nav-item {
+.nav-link {
+    color: $color_blanco;
     transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+    
 }
 
-.nav-item:hover {
+.nav-link:hover {
     transform: scale(0.9);
+    color: rgba(0,136,169,1);
 }

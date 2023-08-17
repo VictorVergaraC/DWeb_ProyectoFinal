@@ -71,6 +71,9 @@ nav {
 nav {
   font-family: "Montserrat", sans-serif;
 }
+nav ul li {
+  color: rgb(0, 136, 169);
+}
 
 .navbar-toggler {
   color: #edf0f1;
@@ -84,12 +87,14 @@ nav {
   color: #edf0f1;
 }
 
-.nav-item {
+.nav-link {
+  color: #edf0f1;
   transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-.nav-item:hover {
+.nav-link:hover {
   transform: scale(0.9);
+  color: rgb(0, 136, 169);
 }
 
 .img-principal {
@@ -119,11 +124,15 @@ nav {
   border-radius: 5px;
 }
 
-.btn {
+.boton {
+  background-color: rgb(0, 136, 169);
+  color: #edf0f1;
   transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-.btn:hover {
+.boton:hover {
+  background-color: rgba(0, 136, 169, 0.6);
+  color: #edf0f1;
   transform: scale(0.9);
 }
 

@@ -1,17 +1,22 @@
-@mixin boton($bg_color, $color_letra, $width, $borde_redondo) {
+@mixin boton($bg_color, $color_letra) {
+
+    background-color: $bg_color;
+    color: $color_letra;    
+}
+
+@mixin boton_hover($bg_color, $color_letra) {
 
     background-color: $bg_color;
     color: $color_letra;
-    width: $width;
-    border-radius: $borde_redondo;
 }
 
-.btn {
-    
+.boton {
+    @include boton_hover(rgba(0,136,169,1),$color_blanco);
     transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-.btn:hover {
+.boton:hover {
+    @include boton_hover(rgba(0,136,169,0.6),$color_blanco);
     transform: scale(0.9);
 }
 
