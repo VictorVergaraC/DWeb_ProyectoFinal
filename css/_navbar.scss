@@ -1,32 +1,129 @@
+// nav {
+//     font-family: "Montserrat", sans-serif;
+
+//     ul {
+
+//         li {
+//             color: rgba(0,136,169,1);
+//         }
+//     }
+// }
+
+// .bg-nav-footer {
+//     background-color: $color_negro;
+// }
+
+// .texto-nav-footer {
+//     color: $color_blanco;
+// }
+
+// .nav-link {
+//     color: $color_blanco;
+//     transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+// }
+
+// .nav-link:hover {
+//     transform: scale(0.9);
+//     color: rgba(0,136,169,1);
+// }
+
+// .navbar .toggle-button {
+//     display: flex;
+//     position: absolute;
+//     // top: 40px;
+//     right: 1.5rem;
+//     left: auto;
+// }
+
 nav {
-    font-family: "Montserrat", sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 15%;
+    background-color: $color_negro;
+    width: 100%;
+    color: $color_blanco;
 
-    ul {
+    .titulo-nav {
+        font-size: 40px;
+        margin: .5rem;
+        align-self: self-start;
+    }
 
-        li {
-            color: rgba(0,136,169,1);
-        }
+    li {
+        list-style: none;
+        padding: 0px 20px;
+        display: inline-block;
+    }
+    
+    a {
+        transition: all 0.3s ease 0s;
+        color: $color_blanco;
+    }
+    a:hover {
+        color: #0088a9;
+        transform: scale(0.9);
+    }
+    
+    li, a, button {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        text-decoration: none;
+        transition: all 0.3s ease 0s;
+    }
+
+    button {
+        padding: 9px 25px;
+        background-color: rgba(0,136,169,1);
+        color: $color_blanco;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+    }
+    button:hover {
+        background-color: rgba(0,136,169,0.8);
+        transform: scale(0.9);
+    }
+
+    .toggle-button {
+        display: none;
     }
 }
 
-.navbar-toggler {
-    color: $color_blanco;
-}
+@media screen and (max-width: 768px) {
+    nav {
 
-.bg-nav-footer {
-    background-color: $color_negro;
-}
+        display: inline-block;
+        flex-direction: column;
+        align-items: flex-start;
 
-.texto-nav-footer {
-    color: $color_blanco;
-}
+        .toggle-button {
+            display: flex;
+            position: absolute;
+            right: 1.5rem;
+            left: auto;
+        }
 
-.nav-link {
-    color: $color_blanco;
-    transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
-}
+        .nav-links {
+            display: none;
+            width: 100%;
+            transition: all 0.3s ease 0s;
 
-.nav-link:hover {
-    transform: scale(0.9);
-    color: rgba(0,136,169,1);
+            ul, li {
+                width: 100%;
+                font-size: 40px;
+                text-align: center;
+            }
+
+        }
+        .nav-links.active {
+            display: flex;
+            position: relative;
+            transition: all 0.3s ease 0s;
+        }
+        
+
+    }
 }
