@@ -1,3 +1,18 @@
+@mixin img_transicion() {
+    transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+@mixin img_transicion_hover() {
+    transform: scale(0.9); 
+}
+
+.img_animate {
+    @include img_transicion()
+}
+
+.img_animate:hover {
+    @include img_transicion_hover()
+}
+
 .card {
     width: 17rem;
 
@@ -6,10 +21,6 @@
         height: auto;
         padding: .8rem;
     }
-}
-
-.new-card {
-    
 }
 
 .card-info {
@@ -70,41 +81,50 @@
 
 }
 
+// - - - - - - - - - - - - - - - - - - - - - - -
+
 .contenedor-articulos {
     display: flex;
     flex-direction: row;
     gap: 1rem;
+    
 }
 
 .articulo {
     display: flex;
     flex-direction: column;
-    border: 1px solid #ccc;
+    border: 1px solid $color_blanco;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px $color_negro;
     margin: 10px;
-    width: 100%;
+    width: 80%;
 
     img {
         width: 100%;
         height: auto;
-        object-fit: contain; // Cambiamos 'cover' a 'contain'
+        object-fit: contain;
     }
-    
+
     .articulo-contenido {
         padding: 20px;
-    
+
         h3 {
-          margin-top: 0;
+            margin-top: 0;
+        }
+
+        .articulo-boton {
+            justify-content: flex-end;
+            align-items: center;
         }
     }
 
     @media (min-width: 768px) {
         flex-direction: row;
 
-        .card-content {
-        flex: 1;
+        .articulo-contenido {
+            justify-content: center;
+            align-items: center;
         }
 
         img {
@@ -136,4 +156,98 @@
         flex-direction: column;
         align-items: center;
     }
+}
+
+.marca {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    width: 100%;
+
+    .marca-image {
+        img {
+            width: 100%;
+            height: auto;
+            max-height: 200px;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+    }
+
+    .marca-contenido {
+        display: flex;
+        padding: 20px;
+
+        h3 {
+            margin-top: 0;
+        }
+    }
+
+    @media (min-width: 992px) {
+        &.marca {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    }
+
+    @media (min-width: 768px) {
+        
+        align-items: center;
+        justify-content: center;
+
+        .marca-contenido {
+            display: 1;
+        }
+
+        .marca-image {
+            width: 40%;
+            max-height: none;
+        }
+    }
+}
+
+.vendidos {
+    display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  width: 100%;
+
+  .vendidos-image {
+    img {
+      width: 100%;
+      height: auto;
+      max-height: 200px; // Altura máxima de la imagen
+      object-fit: contain; // Ajusta la imagen sin recortarla
+    }
+  }
+
+  .vendidos-content {
+    padding: 20px;
+
+    h3 {
+      margin-top: 0;
+    }
+  }
+
+  // Media query para hacerla responsive
+  @media (min-width: 768px) {
+    flex-direction: row;
+
+    .vendidos-content {
+      flex: 1;
+    }
+
+    .vendidos-image {
+      width: 40%;
+      max-height: none; // Eliminamos la altura máxima
+    }
+  }
 }
