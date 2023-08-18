@@ -77,9 +77,37 @@ nav {
 }
 
 .articulo {
-  padding: 3rem;
-  border: 1px solid #24252A;
-  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  width: 100%;
+}
+.articulo img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.articulo .articulo-contenido {
+  padding: 20px;
+}
+.articulo .articulo-contenido h3 {
+  margin-top: 0;
+}
+@media (min-width: 768px) {
+  .articulo {
+    flex-direction: row;
+  }
+  .articulo .card-content {
+    flex: 1;
+  }
+  .articulo img {
+    width: 40%;
+    max-width: none;
+  }
 }
 
 .articulo-boton {
@@ -105,41 +133,6 @@ nav {
     align-items: center;
   }
 }
-.section-absoluto {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-}
-.section-absoluto .absoluto-layer {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-.section-absoluto .absoluto-layer.layer-bg {
-  background-image: url("https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80");
-  z-index: -1;
-}
-.section-absoluto .absoluto-layer.layer-contenido {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  z-index: 1;
-  color: white;
-}
-.section-absoluto .absoluto-layer.layer-contenido h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-.section-absoluto .absoluto-layer.layer-contenido p {
-  font-size: 1.5rem;
-}
-
 nav {
   display: flex;
   justify-content: space-between;
@@ -315,6 +308,41 @@ body {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.section-absoluto {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.section-absoluto .absoluto-layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.section-absoluto .absoluto-layer.layer-bg {
+  background-image: url("../img/sections/img-absolute.jpg");
+  z-index: -1;
+}
+.section-absoluto .absoluto-layer.layer-contenido {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 1;
+  color: white;
+}
+.section-absoluto .absoluto-layer.layer-contenido h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.section-absoluto .absoluto-layer.layer-contenido p {
+  font-size: 1.5rem;
 }
 
 @media (max-width: 998px) {
