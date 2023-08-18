@@ -1,39 +1,7 @@
-// nav {
-//     font-family: "Montserrat", sans-serif;
-
-//     ul {
-
-//         li {
-//             color: rgba(0,136,169,1);
-//         }
-//     }
-// }
-
-// .bg-nav-footer {
-//     background-color: $color_negro;
-// }
-
-// .texto-nav-footer {
-//     color: $color_blanco;
-// }
-
-// .nav-link {
-//     color: $color_blanco;
-//     transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
-// }
-
-// .nav-link:hover {
-//     transform: scale(0.9);
-//     color: rgba(0,136,169,1);
-// }
-
-// .navbar .toggle-button {
-//     display: flex;
-//     position: absolute;
-//     // top: 40px;
-//     right: 1.5rem;
-//     left: auto;
-// }
+@mixin navbar_items($color_text) {
+    color: $color_text;
+    font-family: "Montserrat", sans-serif;
+}
 
 nav {
     display: flex;
@@ -42,7 +10,6 @@ nav {
     padding: 20px 15%;
     background-color: $color_negro;
     width: 100%;
-    color: $color_blanco;
 
     .titulo-nav {
         font-size: 40px;
@@ -54,19 +21,20 @@ nav {
         list-style: none;
         padding: 0px 20px;
         display: inline-block;
-    }
-    
-    a {
         transition: all 0.3s ease 0s;
-        color: $color_blanco;
     }
-    a:hover {
-        color: #0088a9;
+    li:hover {
         transform: scale(0.9);
     }
     
+    a {
+        @include navbar_items($color_blanco)
+    }
+    a:hover {
+        @include navbar_items(#0088a9)
+    }
+    
     li, a, button {
-        font-family: "Montserrat", sans-serif;
         font-weight: 500;
         font-size: 16px;
         text-decoration: none;
@@ -76,11 +44,11 @@ nav {
     button {
         padding: 9px 25px;
         background-color: rgba(0,136,169,1);
-        color: $color_blanco;
         border: none;
         border-radius: 50px;
         cursor: pointer;
         transition: all 0.3s ease 0s;
+        @include navbar_items($color_blanco)
     }
     button:hover {
         background-color: rgba(0,136,169,0.8);
@@ -90,6 +58,8 @@ nav {
     .toggle-button {
         display: none;
     }
+
+    @include navbar_items($color_blanco)
 }
 
 @media screen and (max-width: 768px) {
@@ -98,18 +68,18 @@ nav {
         display: inline-block;
         flex-direction: column;
         align-items: flex-start;
-        transition: all 0.3s ease 0s;
-
+        
         .toggle-button {
             display: flex;
             position: absolute;
             right: 1.5rem;
             left: auto;
         }
-
+        
         .nav-links {
             display: none;
             width: 100%;
+
             ul, li {
                 width: 100%;
                 font-size: 40px;
