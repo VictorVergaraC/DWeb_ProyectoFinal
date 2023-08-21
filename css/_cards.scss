@@ -1,8 +1,9 @@
 @mixin img_transicion() {
     transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
+
 @mixin img_transicion_hover() {
-    transform: scale(0.9); 
+    transform: scale(0.9);
 }
 
 .img_animate {
@@ -87,7 +88,8 @@
     display: flex;
     flex-direction: row;
     gap: 1rem;
-    
+    flex-wrap: wrap;
+
 }
 
 .articulo {
@@ -98,7 +100,7 @@
     overflow: hidden;
     box-shadow: 0 2px 4px $color_negro;
     margin: 10px;
-    width: 80%;
+    width: 230px;
 
     img {
         width: 100%;
@@ -167,42 +169,60 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin: 10px;
     width: 100%;
+    padding: 1%;
+
+    position: relative;
 
     .marca-image {
         img {
             width: 100%;
             height: auto;
-            max-height: 200px;
             object-fit: contain;
             border-radius: 10px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
         }
     }
 
     .marca-contenido {
         display: flex;
         padding: 20px;
+        justify-content: center;
+
+        opacity: 0;
+        transition: opacity 0.4s ease;
 
         h3 {
             margin-top: 0;
         }
     }
 
-    @media (min-width: 992px) {
-        &.marca {
-            flex-direction: row;
-            flex-wrap: wrap;
+    &:hover {
+        .marca-image {
+            transform: translateY(-7px);
+        }
+
+        .marca-contenido {
+            opacity: 1;
         }
     }
 
-    @media (min-width: 768px) {
+    @media (max-width: 992px) {
         
+        .marca-contenido {
+            display: none;
+        }
+    }
+
+    @media (max-width: 768px) {
+
         align-items: center;
         justify-content: center;
 
-        .marca-contenido {
-            display: 1;
-        }
-
+        
         .marca-image {
             width: 40%;
             max-height: none;
@@ -212,42 +232,103 @@
 
 .vendidos {
     display: flex;
-  flex-direction: column;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin: 10px;
-  width: 100%;
-
-  .vendidos-image {
-    img {
-      width: 100%;
-      height: auto;
-      max-height: 200px; // Altura máxima de la imagen
-      object-fit: contain; // Ajusta la imagen sin recortarla
-    }
-  }
-
-  .vendidos-content {
-    padding: 20px;
-
-    h3 {
-      margin-top: 0;
-    }
-  }
-
-  // Media query para hacerla responsive
-  @media (min-width: 768px) {
-    flex-direction: row;
-
-    .vendidos-content {
-      flex: 1;
-    }
+    flex-direction: column;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    width: 100%;
 
     .vendidos-image {
-      width: 40%;
-      max-height: none; // Eliminamos la altura máxima
+        img {
+            width: 100%;
+            height: auto;
+            max-height: 200px;
+            object-fit: contain;
+        }
     }
-  }
+
+    .vendidos-content {
+        padding: 20px;
+
+        h3 {
+            margin-top: 0;
+        }
+    }
+
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+
+        .vendidos-content {
+            flex: 1;
+        }
+
+        .vendidos-image {
+            width: 40%;
+            max-height: none;
+        }
+    }
+}
+
+.aviso {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    width: 100%;
+
+    .aviso-image {
+        img {
+            width: 100%;
+            height: auto;
+            max-height: 200px;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+    }
+
+    .aviso-contenido {
+        display: flex;
+        flex-direction: column;
+
+        h3 {
+            text-align: center;
+        }
+    }
+
+    .aviso-contenido {
+        display: flex;
+        padding: 20px;
+
+        h3 {
+            margin-top: 0;
+        }
+    }
+
+    @media (min-width: 992px) {
+        &.aviso {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    }
+
+    @media (min-width: 768px) {
+
+        align-items: center;
+        justify-content: center;
+
+        .aviso-contenido {
+            display: 1;
+        }
+
+        .aviso-image {
+            width: 40%;
+            max-height: none;
+        }
+    }
 }
