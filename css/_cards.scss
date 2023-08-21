@@ -14,82 +14,17 @@
     @include img_transicion_hover()
 }
 
-.card {
-    width: 17rem;
-
-    .cont-img {
-        max-width: 100%;
-        height: auto;
-        padding: .8rem;
-    }
-}
-
-.card-info {
-    max-width: 40rem;
-}
-
-.card-marca {
-    width: 14rem;
-    margin: 1rem .8rem;
-    overflow: hidden;
-}
-
-.card-footer {
-    background-color: $color_blanco;
-    padding: 10px 20px;
-    border-top: 1px solid #ddd;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .text-card {
     font-size: 0.9rem;
     color: $color_negro;
 }
-
-@media (max-width: 998px) {
-
-    .p-vendidos {
-
-        .card {
-            margin: .7rem 0;
-        }
-    }
-
-}
-
-@media (max-width: 767px) {
-    .card-title {
-        font-size: 1rem;
-    }
-
-    .card-deck {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .card {
-        margin: .5rem;
-    }
-}
-
-@media (max-width: 408px) {
-    .card-info {
-        width: 16rem;
-    }
-
-}
-
-// - - - - - - - - - - - - - - - - - - - - - - -
 
 .contenedor-articulos {
     display: flex;
     flex-direction: row;
     gap: 1rem;
     flex-wrap: wrap;
-
+    justify-content: center;
 }
 
 .articulo {
@@ -100,7 +35,13 @@
     overflow: hidden;
     box-shadow: 0 2px 4px $color_negro;
     margin: 10px;
-    width: 230px;
+    // max-width: 450px;
+    max-width: 260px;
+
+    &.articulo {
+        justify-content: center;
+        align-items: center;
+    }
 
     img {
         width: 100%;
@@ -118,6 +59,12 @@
         .articulo-boton {
             justify-content: flex-end;
             align-items: center;
+        }
+    }
+
+    @media (max-width: 991px) {
+        .articulo {
+            // max-width: ;
         }
     }
 
@@ -155,7 +102,6 @@
 
 @media (max-width: 991px) {
     .contenedor-articulos {
-        flex-direction: column;
         align-items: center;
     }
 }
@@ -272,6 +218,13 @@
     }
 }
 
+.contenedor-aviso {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+}
+
 .aviso {
     display: flex;
     flex-direction: column;
@@ -280,7 +233,7 @@
     overflow: hidden;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin: 10px;
-    width: 100%;
+    max-width: 600px;
 
     .aviso-image {
         img {

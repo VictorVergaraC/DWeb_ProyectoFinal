@@ -22,67 +22,17 @@ nav {
   transform: scale(0.9);
 }
 
-.card {
-  width: 17rem;
-}
-.card .cont-img {
-  max-width: 100%;
-  height: auto;
-  padding: 0.8rem;
-}
-
-.card-info {
-  max-width: 40rem;
-}
-
-.card-marca {
-  width: 14rem;
-  margin: 1rem 0.8rem;
-  overflow: hidden;
-}
-
-.card-footer {
-  background-color: #edf0f1;
-  padding: 10px 20px;
-  border-top: 1px solid #ddd;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .text-card {
   font-size: 0.9rem;
   color: #24252A;
 }
 
-@media (max-width: 998px) {
-  .p-vendidos .card {
-    margin: 0.7rem 0;
-  }
-}
-@media (max-width: 767px) {
-  .card-title {
-    font-size: 1rem;
-  }
-  .card-deck {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .card {
-    margin: 0.5rem;
-  }
-}
-@media (max-width: 408px) {
-  .card-info {
-    width: 16rem;
-  }
-}
 .contenedor-articulos {
   display: flex;
   flex-direction: row;
   gap: 1rem;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .articulo {
@@ -93,7 +43,11 @@ nav {
   overflow: hidden;
   box-shadow: 0 2px 4px #24252A;
   margin: 10px;
-  width: 230px;
+  max-width: 260px;
+}
+.articulo.articulo {
+  justify-content: center;
+  align-items: center;
 }
 .articulo img {
   width: 100%;
@@ -143,7 +97,6 @@ nav {
 
 @media (max-width: 991px) {
   .contenedor-articulos {
-    flex-direction: column;
     align-items: center;
   }
 }
@@ -236,6 +189,13 @@ nav {
   }
 }
 
+.contenedor-aviso {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+}
+
 .aviso {
   display: flex;
   flex-direction: column;
@@ -244,7 +204,7 @@ nav {
   overflow: hidden;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin: 10px;
-  width: 100%;
+  max-width: 600px;
 }
 .aviso .aviso-image img {
   width: 100%;
@@ -303,7 +263,6 @@ nav .titulo-nav {
   align-self: self-start;
 }
 nav li {
-  list-style: none;
   padding: 0px 20px;
   display: inline-block;
   transition: all 0.3s ease 0s;
@@ -323,6 +282,7 @@ nav li, nav a, nav button {
   font-weight: 500;
   font-size: 16px;
   text-decoration: none;
+  list-style: none;
   transition: all 0.3s ease 0s;
 }
 nav button {
@@ -462,6 +422,11 @@ body {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contenido {
+  display: flex;
+  flex-direction: column;
 }
 
 .texto-sombreado {

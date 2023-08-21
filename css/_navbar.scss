@@ -18,7 +18,7 @@ nav {
     }
 
     li {
-        list-style: none;
+        
         padding: 0px 20px;
         display: inline-block;
         transition: all 0.3s ease 0s;
@@ -38,6 +38,7 @@ nav {
         font-weight: 500;
         font-size: 16px;
         text-decoration: none;
+        list-style: none;
         transition: all 0.3s ease 0s;
     }
 

@@ -44,6 +44,11 @@ body {
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
 }
 
+.contenido {
+    display: flex;
+    flex-direction: column;
+}
+
 .texto-sombreado {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
