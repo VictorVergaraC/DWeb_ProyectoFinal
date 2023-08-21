@@ -463,6 +463,12 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border: 1px solid rgb(0, 136, 169);
+  border-radius: 1rem;
+  margin: 0 0 3rem 0;
+}
+.contenedor-marcas h4 {
+  cursor: pointer;
 }
 
 .contenido-padding {
