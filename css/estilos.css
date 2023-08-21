@@ -577,10 +577,14 @@ body {
 .acordion .acordion-item {
   border: 1px solid #ddd;
   margin-bottom: 10px;
+  border-radius: 1rem;
 }
 .acordion .acordion-item .acordion-header {
+  border: none;
+  border-radius: 1rem;
   font-weight: bold;
-  background-color: #f4f4f4;
+  background-color: rgb(87, 167, 187);
+  color: #edf0f1;
   padding: 10px;
   cursor: pointer;
 }

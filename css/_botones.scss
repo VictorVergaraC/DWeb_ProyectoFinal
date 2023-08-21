@@ -60,5 +60,5 @@
 
 .boton-cuenta:hover {
     transform: scale(0.9);
-    @include boton_hover(rgba(0,136,169,0.8), $color_blanco)
+    @include boton_hover(rgba(0, 136, 169, 0.8), $color_blanco)
 }
