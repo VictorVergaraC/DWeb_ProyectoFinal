@@ -239,6 +239,7 @@ nav {
   width: 100%;
   color: #edf0f1;
   font-family: "Montserrat", sans-serif;
+  text-decoration: none;
 }
 nav .titulo-nav {
   font-size: 40px;
@@ -256,10 +257,12 @@ nav li:hover {
 nav a {
   color: #edf0f1;
   font-family: "Montserrat", sans-serif;
+  text-decoration: none;
 }
 nav a:hover {
   color: #0088a9;
   font-family: "Montserrat", sans-serif;
+  text-decoration: none;
 }
 nav li, nav a, nav button {
   font-weight: 500;
@@ -434,9 +437,32 @@ body {
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
 }
 
+.texto-subrayado {
+  font-family: "Montserrat", sans-serif;
+  color: rgb(0, 136, 169);
+  text-decoration: underline;
+  transition: transform 0.3s ease;
+}
+
+.texto-subrayado:hover {
+  transform: scale(1.1);
+}
+
+.centrar-h {
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
 .contenido {
   display: flex;
   flex-direction: column;
+}
+
+.contenedor-marcas {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .contenido-padding {
@@ -601,6 +627,30 @@ body {
   .acordion .acordion-item .acordion-header {
     font-size: 18px;
   }
+}
+
+.carrusel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.carrusel .carrusel-container {
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+}
+.carrusel .carrusel-container .carrusel-item {
+  flex: 0 0 33.3333333333%;
+  padding: 5rem;
+  gap: 1rem;
+}
+.carrusel .carrusel-container .carrusel-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 /*# sourceMappingURL=estilos.css.map */

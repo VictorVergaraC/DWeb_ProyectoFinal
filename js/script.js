@@ -21,6 +21,26 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         })
     }
+
+    const carouselContainer = document.querySelector(".carrusel-container");
+    if (carouselContainer) {
+        let currentIndex = 0;
+        const interval = 5000;
+
+        const mover = (index) => {
+            currentIndex = index;
+            const translateX = -currentIndex * (100 / 3);
+            carouselContainer.style.transform = `translateX(${translateX}%)`;
+        }
+
+        const siguienteItem = () => {
+            currentIndex = (currentIndex + 1) % (carouselContainer.children.length - 2);
+            mover(currentIndex);
+        }
+
+        setInterval(siguienteItem, interval);
+    }
+
 })
 
 AOS.init();

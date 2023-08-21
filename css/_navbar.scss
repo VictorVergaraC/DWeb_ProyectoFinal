@@ -1,6 +1,7 @@
 @mixin navbar_items($color_text) {
     color: $color_text;
     font-family: "Montserrat", sans-serif;
+    text-decoration: none;
 }
 
 nav {
@@ -18,7 +19,6 @@ nav {
     }
 
     li {
-        
         padding: 0px 20px;
         display: inline-block;
         transition: all 0.3s ease 0s;
