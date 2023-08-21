@@ -35,7 +35,6 @@
     overflow: hidden;
     box-shadow: 0 2px 4px $color_negro;
     margin: 10px;
-    // max-width: 450px;
     max-width: 260px;
 
     &.articulo {
@@ -62,11 +61,7 @@
         }
     }
 
-    @media (max-width: 991px) {
-        .articulo {
-            // max-width: ;
-        }
-    }
+    @media (max-width: 991px) {}
 
     @media (min-width: 768px) {
         flex-direction: row;
@@ -83,23 +78,6 @@
     }
 }
 
-.articulo-boton {
-    background: none;
-    border: none;
-    background-color: #00315d;
-    color: $color_blanco;
-    font-size: 1rem;
-    font-family: 'Roboto Serif', serif;
-    padding: 10px 20px;
-    border-radius: 1rem;
-    transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
-}
-
-.articulo-boton:hover {
-    background-color: rgb(7, 90, 142);
-    transform: scale(0.9);
-}
-
 @media (max-width: 991px) {
     .contenedor-articulos {
         align-items: center;
@@ -109,14 +87,14 @@
 .marca {
     display: flex;
     flex-direction: column;
-    border: 1px solid #ccc;
+    border: 1px solid $color_blanco;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px $color_negro;
     margin: 10px;
-    width: 100%;
+    width: 280px;
+    height: 320px;
     padding: 1%;
-
     position: relative;
 
     .marca-image {
@@ -124,19 +102,17 @@
             width: 100%;
             height: auto;
             object-fit: contain;
-            border-radius: 10px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            top: 1px;
             transition: transform 0.3s ease;
         }
     }
 
     .marca-contenido {
+        margin-top: auto;
         display: flex;
         padding: 20px;
         justify-content: center;
+        align-items: end;
 
         opacity: 0;
         transition: opacity 0.4s ease;
@@ -157,7 +133,7 @@
     }
 
     @media (max-width: 992px) {
-        
+
         .marca-contenido {
             display: none;
         }
@@ -168,7 +144,7 @@
         align-items: center;
         justify-content: center;
 
-        
+
         .marca-image {
             width: 40%;
             max-height: none;
@@ -179,10 +155,10 @@
 .vendidos {
     display: flex;
     flex-direction: column;
-    border: 1px solid #ccc;
+    border: 1px solid $color_blanco;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px $color_negro;
     margin: 10px;
     width: 100%;
 
@@ -228,10 +204,10 @@
 .aviso {
     display: flex;
     flex-direction: column;
-    border: 1px solid #ccc;
+    border: 1px solid $color_blanco;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px $color_negro;
     margin: 10px;
     max-width: 600px;
 

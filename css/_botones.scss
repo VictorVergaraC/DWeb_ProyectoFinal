@@ -1,11 +1,11 @@
-@mixin boton($bg_color, $color_letra, $font_family) {
+@mixin boton($bg_color, $color_letra, $font_family, $border_radius) {
 
     background-color: $bg_color;
     color: $color_letra;
     border: none;
     font-family: $font_family, sans-serif;
     padding: .4rem 2rem;
-    border-radius: 50px;
+    border-radius: $border_radius;
     text-decoration: none;
 
 }
@@ -17,20 +17,48 @@
 }
 
 .boton {
-    @include boton(rgba(0,136,169,1),$color_blanco, 'Montserrat');
+    @include boton(rgba(0, 136, 169, 1), $color_blanco, 'Montserrat', 50px);
     transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 .boton-comprar {
-    @include boton(rgba(0,136,169,1),$color_blanco, 'Open Sans');
+    @include boton(rgba(0, 136, 169, 1), $color_blanco, 'Open Sans', 50px);
     transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
+
 .boton-comprar:hover {
-    @include boton_hover(rgba(0,136,169,0.6),$color_blanco);
+    @include boton_hover(rgba(0, 136, 169, 0.6), $color_blanco);
     transform: scale(0.9);
 }
 
 .boton:hover {
-    @include boton_hover(rgba(0,136,169,0.6),$color_blanco);
+    @include boton_hover(rgba(0, 136, 169, 0.6), $color_blanco);
     transform: scale(0.9);
+}
+
+.articulo-boton {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    padding: 10px 20px;
+    transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+    @include boton(#00315d, $color_blanco, 'Roboto Serif', 1rem)
+}
+
+.articulo-boton:hover {
+    transform: scale(0.9);
+    @include boton_hover(rgb(7, 90, 142), $color_blanco)
+}
+
+.boton-cuenta {
+    padding: 9px 25px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    @include boton(rgba(0, 136, 169, 1), $color_blanco, "Montserrat", 50px)
+}
+
+.boton-cuenta:hover {
+    transform: scale(0.9);
+    @include boton_hover(rgba(0,136,169,0.8), $color_blanco)
 }
