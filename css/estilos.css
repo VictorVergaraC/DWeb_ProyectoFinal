@@ -465,7 +465,7 @@ body {
   align-items: center;
   border: 1px solid rgb(0, 136, 169);
   border-radius: 1rem;
-  margin: 0 0 3rem 0;
+  margin: 1rem 3% 2rem;
 }
 .contenedor-marcas h4 {
   cursor: pointer;
