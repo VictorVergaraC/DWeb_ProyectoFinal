@@ -432,6 +432,7 @@ nav .toggle-button {
 
 footer {
   background-color: #24252A;
+  font-family: "Montserrat", serif;
 }
 footer .texto-nav-footer {
   color: #edf0f1;
@@ -602,6 +603,45 @@ body {
   }
   .section-absoluto-regalo .absoluto-layer.layer-contenido p {
     font-size: 1.1rem;
+  }
+}
+
+.form-group {
+  width: 100%;
+}
+
+.contenedor-contacto {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem auto;
+  align-items: center;
+  font-family: "Montserrat", serif;
+}
+
+.section-contacto {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 2.5% 5%;
+}
+.section-contacto form {
+  flex: 1;
+  max-width: 600px;
+}
+.section-contacto .iframe {
+  flex: 1;
+  max-width: 600px;
+}
+.section-contacto .iframe iframe {
+  width: 100%;
+  height: 350px;
+}
+@media (max-width: 768px) {
+  .section-contacto {
+    flex-direction: column;
+  }
+  .section-contacto form, .section-contacto .iframe {
+    max-width: 100%;
   }
 }
 
