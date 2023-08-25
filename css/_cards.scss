@@ -261,3 +261,33 @@
         }
     }
 }
+
+.info-marca {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 1rem;
+    font-family: $font_montserrat;
+
+    div {
+        max-width: 800px;
+    }
+
+    img {
+        height: 250px;
+        width: 370px;
+        object-fit: contain;
+    }
+
+    &.info-marca {
+        margin: 1rem auto;
+    }
+
+    @media (max-width: 992px) {
+        flex-direction: column;
+
+        img {
+            width: 300px;
+        }
+    }
+}

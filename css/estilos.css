@@ -230,6 +230,33 @@ nav {
   }
 }
 
+.info-marca {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 1rem;
+  font-family: "Montserrat", serif;
+}
+.info-marca div {
+  max-width: 800px;
+}
+.info-marca img {
+  height: 250px;
+  width: 370px;
+  object-fit: contain;
+}
+.info-marca.info-marca {
+  margin: 1rem auto;
+}
+@media (max-width: 992px) {
+  .info-marca {
+    flex-direction: column;
+  }
+  .info-marca img {
+    width: 300px;
+  }
+}
+
 nav {
   display: flex;
   justify-content: space-between;
