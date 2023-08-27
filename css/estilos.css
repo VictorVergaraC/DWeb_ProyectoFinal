@@ -631,6 +631,65 @@ body {
   gap: 1rem;
   margin: 1%;
 }
+.contenedor-contacto .section-registro {
+  display: flex;
+  gap: 3rem;
+  margin-top: 3%;
+  margin: 0 5%;
+}
+.contenedor-contacto .section-registro aside {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contenedor-contacto .section-registro aside .social-icons {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0;
+}
+.contenedor-contacto .section-registro aside .social-icons li {
+  margin: 1rem 10px;
+}
+.contenedor-contacto .section-registro aside .social-icons li a {
+  display: block;
+  font-size: 24px;
+  color: #333;
+  text-decoration: none;
+}
+.contenedor-contacto .section-registro aside .social-icons li a:hover.facebook {
+  color: #1877f2;
+}
+.contenedor-contacto .section-registro aside .social-icons li a:hover.twitter {
+  color: #1da1f2;
+}
+.contenedor-contacto .section-registro aside .social-icons li a:hover.instagram {
+  color: #c13584;
+}
+.contenedor-contacto .section-registro aside .social-icons li a:hover.github {
+  color: #181717;
+}
+.contenedor-contacto .section-registro aside .social-icons li a:hover.google {
+  color: #DB4437;
+}
+.contenedor-contacto .section-registro aside .social-icons li a:hover.youtube {
+  color: #FF0000;
+}
+.contenedor-contacto .section-registro aside .social-icons li a:hover.linkedin {
+  color: #0A66C2;
+}
+@media (max-width: 768px) {
+  .contenedor-contacto .section-registro aside .social-icons .social-icons li {
+    margin: 0 5px;
+  }
+}
+@media (max-width: 768px) {
+  .contenedor-contacto .section-registro {
+    flex-direction: column;
+  }
+}
+
 .section-contacto {
   display: flex;
   flex-wrap: wrap;
@@ -653,7 +712,8 @@ body {
   .section-contacto {
     flex-direction: column;
   }
-  .section-contacto form, .section-contacto .iframe {
+  .section-contacto form,
+  .section-contacto .iframe {
     max-width: 100%;
   }
 }
