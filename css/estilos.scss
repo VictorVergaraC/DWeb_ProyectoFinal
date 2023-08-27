@@ -214,14 +214,19 @@ body {
     margin: 2rem auto;
     align-items: center;
     font-family: $font_montserrat;
+
+    .section-login {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin: 1%;
+    }
+    
+    .section-registro {
+        
+    }
 }
 
-.section-login {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin: 1%;
-}
 
 .section-contacto {
     display: flex;

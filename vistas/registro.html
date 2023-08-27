@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VF - Login</title>
+    <title>VF - Registrarme</title>
     <meta name="description"
         content="Ubícanos en el local N°150 dentro del Hotel Pucón, C. Clemente Holzapfel #190. Y en todas nuestras redes sociales, con el nombre de usuario @_vf_suplementos_">
     <meta name="keywords" content="VF Suplementos, @_vf_suplementos_">
@@ -36,15 +36,39 @@
                 <li class="link-item"><a href="contacto.html">Contacto</a></li>
                 <li class="link-item"><a href="marcas.html">Marcas</a></li>
                 <li class="link-item"><a href="preguntas_frecuentes.html">Preguntas Frecuentes</a></li>
-                <li><a class="boton-cuenta" href="#">Cuenta</a></li>
+                <li><a class="boton-cuenta" href="login.html">Cuenta</a></li>
             </ul>
         </div>
     </nav>
     <main class="contenedor-contacto">
-        <h2>Inicia sesión</h2>
-        <p class="mx-5">Podrás ver tus compras, direcciones de envío, cupones de descuento y más.</p>
-        <section class="section-login">
+        <h2>Regístrate aquí</h2>
+        <p class="mx-5">Recibirás nuestros cupones de descuento, participarás en nuestros sorteos, recibe noticias exclusivas, y lo mejor de todo, serás el primero en conocer nuestras ofertas!.</p>
+        <section class="section-registro">
             <form action="#">
+                <div class="form-group my-2">
+                    <label for="nombre">Nombre Completo</label>
+                    <input name="nombre" type="text" class="form-control" placeholder="Ingresa tu nombre ...">
+                </div>
+                <div class="form-group my-2">
+                    <label for="telefono">Teléfono</label>
+                    <input name="telefono" type="text" class="form-control" placeholder="Ingresa tu número de contacto ...">
+                </div>
+                <div class="form-group my-2">
+                    <label for="regiones">Región</label>
+                    <select name="regiones" id="regiones" class="form-control">
+                        <option value="" disabled selected>Selecciona una región ...</option>
+                    </select>
+                </div>
+                <div class="form-group my-2">
+                    <label for="comuna">Comuna</label>
+                    <select name="comuna" id="comuna" class="form-control">
+                        <option value="" disabled selected>Selecciona una comuna ...</option>
+                    </select>
+                </div>
+                <div class="form-group my-2">
+                    <label for="direccion">Dirección</label>
+                    <input name="direccion" type="text" class="form-control" placeholder="Ingresa tu dirección ... Ej: Mi Calle, #123">
+                </div>
                 <div class="form-group my-2">
                     <label for="correo">Correo Electrónico</label>
                     <input name="correo" type="email" class="form-control" placeholder="Ingresa tu correo ...">
@@ -54,12 +78,15 @@
                     <input name="clave" type="password" class="form-control"
                         placeholder="Ingresa tu contraseña ...">
                 </div>
+                <div class="form-group my-2">
+                    <label for="reclave">Confirmar Contraseña</label>
+                    <input name="reclave" type="password" class="form-control"
+                        placeholder="Reingresa tu contraseña ...">
+                </div>
                 <div class="form-group my-3 d-flex justify-content-end">
-                    <button class="boton-cuenta mx-auto">Ingresar</button>
+                    <button class="boton-cuenta mx-auto">Registrarme</button>
                 </div>
-                <div class="form-group my-2 d-flex justify-content-end">
-                    <a class="mx-auto" href="registro.html">¿No tienes cuenta? Regístrate aquí</a>
-                </div>
+                
             </form>
         </section>
     </main>

@@ -233,7 +233,6 @@ nav {
 .info-marca {
   display: flex;
   max-width: 1200px;
-  margin: 0 auto;
   gap: 1rem;
   font-family: "Montserrat", serif;
 }
@@ -254,6 +253,15 @@ nav {
   }
   .info-marca img {
     width: 300px;
+  }
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+@media (max-width: 992px) {
+  .reverse {
+    flex-direction: column;
   }
 }
 
@@ -617,14 +625,12 @@ body {
   align-items: center;
   font-family: "Montserrat", serif;
 }
-
-.section-login {
+.contenedor-contacto .section-login {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   margin: 1%;
 }
-
 .section-contacto {
   display: flex;
   flex-wrap: wrap;

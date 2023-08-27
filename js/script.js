@@ -45,14 +45,47 @@ document.addEventListener("DOMContentLoaded", function () {
 
 AOS.init();
 
-let toggleButtons = document.querySelectorAll('.toggle-button');
+let toggleButtons = document.querySelectorAll('.toggle-button')
 
 toggleButtons.forEach((button) => {
     button.addEventListener('click', () => {
-        let navLinks = document.querySelectorAll('.nav-links');
+        let navLinks = document.querySelectorAll('.nav-links')
 
         navLinks.forEach((navLink) => {
             navLink.classList.toggle('active');
-        });
+        })
+    })
+})
+
+
+const allRegiones = async () => {
+    const response = await fetch('../js/data.json')
+    const data = await response.json()
+
+    const regionSelect = document.getElementById('regiones')
+    const comunaSelect = document.getElementById('comuna')
+
+    data.regiones.forEach(item => {
+        const option = document.createElement('option')
+        option.value = item.region
+        option.text = item.region
+        regionSelect.appendChild(option)
     });
-});
+
+    regionSelect.addEventListener('change', () => {
+        const regionSelected = regionSelect.value
+        const allComunas = data.regiones.find(region => region.region === regionSelected).comunas
+        
+        console.log(allComunas)
+
+        comunaSelect.innerHTML = '<option value="" disabled selected>Seleccione una comuna ...</option>'
+        allComunas.forEach(comuna => {
+            const option = document.createElement('option')
+            option.value = comuna
+            option.textContent = comuna
+            comunaSelect.appendChild(option)
+        })
+    })
+}
+
+allRegiones();
