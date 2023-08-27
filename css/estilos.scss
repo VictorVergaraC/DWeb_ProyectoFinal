@@ -218,9 +218,22 @@ body {
 
     .section-login {
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
         gap: 1rem;
-        margin: 1%;
+        width: 100%;
+        max-width: 400px;
+        margin: 0 1rem;
+                
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            padding: 0 5%;
+            max-width: 100%; 
+            
+        }
+
     }
 
     .section-registro {
@@ -272,11 +285,11 @@ body {
                 list-style: none;
 
                 li {
-                    margin: 1rem 10px;
+                    margin: .5rem 10px;
 
                     a {
                         display: block;
-                        font-size: 24px;
+                        font-size: 20px;
                         color: #333;
                         text-decoration: none;
 

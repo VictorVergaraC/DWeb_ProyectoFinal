@@ -76,8 +76,6 @@ const allRegiones = async () => {
         const regionSelected = regionSelect.value
         const allComunas = data.regiones.find(region => region.region === regionSelected).comunas
         
-        console.log(allComunas)
-
         comunaSelect.innerHTML = '<option value="" disabled selected>Seleccione una comuna ...</option>'
         allComunas.forEach(comuna => {
             const option = document.createElement('option')
@@ -88,4 +86,7 @@ const allRegiones = async () => {
     })
 }
 
-allRegiones();
+const body = document.getElementById('view_registro')
+if (body) {
+    allRegiones();
+}
